@@ -25,14 +25,14 @@ class CommandTestingSpike extends StatelessWidget {
       child: Column(
         children: <Widget>[
           Text("Test contact to apply labels to: ${contact.nameFull}"),
-          RaisedButton(
+          ElevatedButton(
             child: Text("refresh groups"),
             onPressed: () async {
               List<GroupData> groups = await RefreshContactGroupsCommand(context).execute();
               print(groups.map((x) => x.name).toList().join(","));
             },
           ),
-          RaisedButton(
+          ElevatedButton(
             child: Text("refresh contacts"),
             onPressed: () async {
               await RefreshContactsCommand(context).execute();

@@ -1,4 +1,3 @@
-import 'package:flokk/_internal/http_client.dart';
 import 'package:flokk/commands/dialogs/show_service_error_command.dart';
 import 'package:flokk/commands/refresh_auth_tokens_command.dart';
 import 'package:flokk/globals.dart';
@@ -84,6 +83,7 @@ mixin AuthorizedServiceCommandMixin on AbstractCommand {
     ServiceResult<T> r = await cmd();
 
     /// Check for errors
+    // ignore: unnecessary_null_comparison
     if (!ignoreErrors && r.response != null) {
       ShowServiceErrorCommand(context).execute(r.response);
     }

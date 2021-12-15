@@ -132,6 +132,7 @@ class _MainAppState extends State<MainApp> {
     /// If we've not loaded settings,
     if (!_settingsLoaded) return Container(color: Colors.white);
 
+    // ignore: todo
     // TODO: Use platform brightness to determine default theme. // MediaQuery.of(context).platformBrightness;
     /// Bind to AppModel.theme and get current theme
     ThemeType themeType = context.select<AppModel, ThemeType>((value) => value.theme);

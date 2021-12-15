@@ -1,6 +1,5 @@
 import 'package:flokk/_internal/log.dart';
 import 'package:flokk/_internal/utils/date_utils.dart';
-import 'package:flokk/_internal/utils/string_utils.dart';
 import 'package:flokk/data/contact_data.dart';
 import 'package:flokk/data/group_data.dart';
 import 'package:flokk/data/social_contact_data.dart';
