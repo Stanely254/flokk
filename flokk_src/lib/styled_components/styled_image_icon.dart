@@ -1,6 +1,7 @@
 import 'package:flokk/styles.dart';
 import 'package:flutter/material.dart';
 
+// ignore: todo
 //TODO SB:
 // * Wherever possible allow it to fallback to the default size.
 // * If you find yourself adding similar hardcoded values, feel free to add Sizes.iconSm or Sizes.iconLg

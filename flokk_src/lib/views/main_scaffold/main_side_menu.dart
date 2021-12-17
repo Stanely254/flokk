@@ -36,6 +36,7 @@ class MainSideMenu extends StatefulWidget {
 
 class _MainSideMenuState extends State<MainSideMenu> {
 
+  // ignore: prefer_final_fields
   Map<PageType, Offset> _menuBtnOffsetsByType = {};
   PageType? _prevPage;
 

@@ -66,6 +66,7 @@ class _BulkContactEditBarState extends State<BulkContactEditBar> {
           TransparentTextBtn("None", style: linkStyle, onPressed: () => _handleCheckChanged(StyledCheckboxValue.None))
               .translate(offset: Offset(-Insets.sm * 2, 0)),
           HSpace(Insets.m),
+// ignore: todo
 //TODO: Implement ManageLabels btn
 //          TransparentIconAndTextBtn("Manage Labels", StyledIcons.label, style: linkStyle),
 //          HSpace(Insets.m),

@@ -70,6 +70,7 @@ class MainScaffoldState extends State<MainScaffold> {
 
   void editSelectedContact(String section) => contactsPanel?.showEditView(section);
 
+  // ignore: todo
   //TODO: This should be a command
   /// Attempt to change current page, this might not complete if user is currently editing
   Future<void> trySetCurrentPage(PageType t, [bool refresh = true]) async {
@@ -148,6 +149,7 @@ class MainScaffoldState extends State<MainScaffold> {
     // When a search is submitted, try and navigate to the contactsView
     trySetCurrentPage(PageType.ContactsList);
     // [SB] Hack to try and get more reliable scroll-bar sizing when submitting.
+    // ignore: todo
     //TODO: Confirm this bug still exists (scrollbar can stay stuck on, even when there are no results)
     Future.delayed(1000.milliseconds, () => setState(() {}));
   }

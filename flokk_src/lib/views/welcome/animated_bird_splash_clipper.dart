@@ -32,6 +32,7 @@ class GooeyEdge {
   double edgeFactor = 0.0;
   int lastT = 0;
 
+  // ignore: todo
   // TODO: initValues?
   GooeyEdge({this.count=8, this.edgeFactor=0.09}) {
     points = [];

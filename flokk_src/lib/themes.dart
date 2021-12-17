@@ -1,5 +1,6 @@
 import 'package:flokk/_internal/utils/color_utils.dart';
 import 'package:flokk/styled_components/styled_text_input.dart';
+// ignore: unnecessary_import
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -134,9 +135,13 @@ class AppTheme {
           border: ThinUnderlineBorder(),
         ),
         materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+        // ignore: deprecated_member_use
         textSelectionColor: greyWeak,
+        // ignore: deprecated_member_use
         textSelectionHandleColor: Colors.transparent,
+        // ignore: deprecated_member_use
         buttonColor: accent1,
+        // ignore: deprecated_member_use
         cursorColor: accent1,
         highlightColor: accent1,
         toggleableActiveColor: accent1);

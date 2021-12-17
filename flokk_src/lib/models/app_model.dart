@@ -9,10 +9,10 @@ enum DashboardContactsSectionType { Favorites, RecentlyActive }
 
 enum DashboardSocialSectionType { All, Git, Twitter }
 
-/// //////////////////////////////////////////////////////
-/// APP MODEL - Holds global state/settings for various app components and views.
-/// A mix of different values: Current theme, app version, settings, online status, selected sections etc.
-/// Some of the values are serialized in app.settings file
+///! //////////////////////////////////////////////////////
+///! APP MODEL - Holds global state/settings for various app components and views.
+///! A mix of different values: Current theme, app version, settings, online status, selected sections etc.
+///! Some of the values are serialized in app.settings file
 class AppModel extends AbstractModel {
   static const kCurrentVersion = "1.1.0";
 
@@ -22,13 +22,13 @@ class AppModel extends AbstractModel {
 
   static bool get enableAnimationsOnWeb => true;
 
-  /// Toggle fpsMeter
+  ////! Toggle fpsMeter
   static bool get showFps => false;
 
-  /// Toggle Sketch Design Grid
+  //!/ Toggle Sketch Design Grid
   static bool get showDesignGrid => false;
 
-  /// Ignore limiting cooldown periods (tweets, git events, git repos, groups), always fetch for each request
+  //!/ Ignore limiting cooldown periods (tweets, git events, git repos, groups), always fetch for each request
   static bool get ignoreCooldowns => false;
 
   ContactsModel contactsModel;
@@ -39,11 +39,13 @@ class AppModel extends AbstractModel {
   }
 
   void _handleContactsChanged() {
-    /// Update search engine with latest results
+    //!/ Update search engine with latest results
     searchEngine.contactsList = contactsModel.allContacts;
     searchEngine.groupsList = contactsModel.allGroups;
 
-    /// Watch selected contact and keep it updated when contacts model changes
+    //!/ Watch selected contact and keep it updated when contacts model changes
+    //! ignore: unnecessary_null_comparison
+    // ignore: unnecessary_null_comparison
     if (selectedContact != null) {
       selectedContact = contactsModel.getContactById(selectedContact.id);
     }
@@ -59,8 +61,8 @@ class AppModel extends AbstractModel {
     scheduleSave();
   }
 
-  /// /////////////////////////////////////////////////
-  /// Current dashboard sections (serialized)
+  //!/ /////////////////////////////////////////////////
+  //!/ Current dashboard sections (serialized)
   DashboardContactsSectionType get dashContactsSection => _dashContactsSection;
   DashboardContactsSectionType _dashContactsSection = DashboardContactsSectionType.Favorites;
 
@@ -77,8 +79,8 @@ class AppModel extends AbstractModel {
     notifyListeners();
   }
 
-  /// //////////////////////////////////////////////////
-  /// Selected edit target, controls visibility of the edit panel and selected rows in the various views
+  //!/ //////////////////////////////////////////////////
+  //!/ Selected edit target, controls visibility of the edit panel and selected rows in the various views
   ContactData get selectedContact => _selectedContact ?? ContactData();
   ContactData? _selectedContact;
 

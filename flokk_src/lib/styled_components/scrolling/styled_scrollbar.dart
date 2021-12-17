@@ -17,6 +17,7 @@ class StyledScrollbar extends StatefulWidget {
   final Color? handleColor;
   final Color? trackColor;
 
+  // ignore: todo
   // TODO: Remove contentHeight if we can fix this issue
   // https://stackoverflow.com/questions/60855712/flutter-how-to-force-scrollcontroller-to-recalculate-position-maxextents
   final double? contentSize;

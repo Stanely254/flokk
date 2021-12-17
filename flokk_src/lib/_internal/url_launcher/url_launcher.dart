@@ -24,6 +24,7 @@ class UrlLauncher {
   }
 
   static void openEmail(String value) {
+    // ignore: todo
     /// TODO: Add regEx check, don't bother opening if it's not a valid email
     open("mailto:$value");
   }

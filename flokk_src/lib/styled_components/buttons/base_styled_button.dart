@@ -5,9 +5,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:provider/provider.dart';
 
-/// ////////////////////////////////////////////////////
-/// STYLED BTN - BASE CLASS FOR ALL OTHER BTNS
-/// ////////////////////////////////////////////////////
+///! ////////////////////////////////////////////////////
+///! STYLED BTN - BASE CLASS FOR ALL OTHER BTNS
+///! ////////////////////////////////////////////////////
 class BaseStyledBtn extends StatefulWidget {
   final Widget? child;
   final VoidCallback? onPressed;

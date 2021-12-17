@@ -191,6 +191,7 @@ class StyledSearchTextInputState extends State<StyledSearchTextInput> {
         keyboardType: widget.type,
         obscureText: widget.obscureText,
         autocorrect: widget.autoCorrect,
+        // ignore: deprecated_member_use
         autovalidate: widget.autoValidate,
         enableSuggestions: widget.enableSuggestions,
         style: widget.style ?? TextStyles.Body1,

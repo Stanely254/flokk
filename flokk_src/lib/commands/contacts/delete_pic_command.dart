@@ -25,6 +25,7 @@ class DeletePicCommand extends AbstractCommand with AuthorizedServiceCommandMixi
     );
     if (!doDelete) return false;
 
+    // ignore: todo
     //TODO: replace the profile pic
     //Update local data optimistically
     ServiceResult result = await executeAuthServiceCmd(() async {

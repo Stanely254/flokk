@@ -73,6 +73,7 @@ class BootstrapCommand extends AbstractCommand {
 
     /// ////////////////////////////////////////////////////////////////
     /// Debug: Inject authModel in web dev builds for quicker local testing
+    // ignore: todo
     /// TODO: Remove before release
     bool sideStepLoginFlow = (kDebugMode || kForceWebLogin) && (UniversalPlatform.isWeb || UniversalPlatform.isAndroid);
     if (sideStepLoginFlow) {

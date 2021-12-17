@@ -76,6 +76,7 @@ class HttpResponse {
 
   HttpResponse(this.raw) {
     //No response at all, there must have been a connection error
+    // ignore: unnecessary_null_comparison
     if (raw == null)
       errorType = NetErrorType.disconnected;
     //200 means all is good :)

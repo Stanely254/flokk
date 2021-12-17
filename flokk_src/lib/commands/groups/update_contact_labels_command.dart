@@ -23,7 +23,7 @@ class UpdateContactLabelsCommand extends AbstractCommand with AuthorizedServiceC
 
       ServiceResult result = ServiceResult(null, HttpResponse.empty());
       //Remove contact from groups they are no longer in
-      for (var n in removeFrom) {
+      for (var n in removeFrom) { 
         result = await googleRestService.groups.modify(authModel.googleAccessToken, n, removeContacts: [contact]);
         print("Removed: ${n.name} from ${contact.nameFull}");
       }

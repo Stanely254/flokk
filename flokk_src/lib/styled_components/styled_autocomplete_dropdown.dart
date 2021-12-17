@@ -54,6 +54,7 @@ class _StyledAutoCompleteDropdownState extends State<StyledAutoCompleteDropdown>
   @override
   void dispose() {
     RawKeyboard.instance.removeListener(_handleRawKeyPressed);
+    // ignore: todo
     // TODO: These dispose calls seem to break the contact edit menu
     //_itemsFiltered.dispose();
     //_textController.dispose();

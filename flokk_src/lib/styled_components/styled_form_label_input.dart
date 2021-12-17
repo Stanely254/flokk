@@ -12,6 +12,7 @@ import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 
 class StyledFormLabelInput extends StatefulWidget {
+  // ignore: todo
   //TODO SB@CE - Is this necessary, can't we just pass null and let the default inside StyledSearchTextInput handle it?
   static const EdgeInsets kDefaultTextInputPadding = EdgeInsets.only(bottom: Insets.sm, top: 4);
 
@@ -79,6 +80,7 @@ class _StyledFormLabelInputState extends State<StyledFormLabelInput> {
     Future.microtask(() => _textFocusNode?.requestFocus());
   }
 
+// ignore: todo
 //TODO SB@CE - Consider using expression-body for these types of one-liners
   void _handleRemoveLabel(String label) {
     widget.onRemoveLabel(label);
@@ -111,6 +113,7 @@ class _StyledFormLabelInputState extends State<StyledFormLabelInput> {
     AppTheme theme = context.watch();
     double formWidth = 200;
     double inputWidth = formWidth;
+    // ignore: todo
     //TODO SB@CE - This could be  more readable
     final labelWidth = (String label) {
       return Insets.m +
@@ -121,8 +124,10 @@ class _StyledFormLabelInputState extends State<StyledFormLabelInput> {
           Insets.sm +
           Insets.sm;
     };
+    // ignore: todo
     //TODO SB@CE - Not a big fan of ommitting type here, reduces scanability
     for (final label in widget.labels) {
+      // ignore: todo
       //TODO SB@CE - This should be called something like measureLabel, or calculateLabelWidth
       inputWidth -= labelWidth(label);
     }
@@ -161,6 +166,7 @@ class _StyledFormLabelInputState extends State<StyledFormLabelInput> {
               ],
             ),
           ),
+          // ignore: todo
           //TODO SB@CE - This should respect focus color like other form underlines.
           Container(
             margin: EdgeInsets.only(top: 38),

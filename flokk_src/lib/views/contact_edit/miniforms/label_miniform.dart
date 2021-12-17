@@ -19,8 +19,10 @@ class ContactLabelMiniForm extends BaseMiniForm {
   void _handleAddLabel(String label, BuildContext context) {
     // If the label is empty or we already have that label on our contact then dont add it
     if (label.isEmpty || c.groupList.any((g) => g.name == label)) return;
+    // ignore: todo
     //TODO SB@CE - This (form.widget.contactsModel) is probably ok, since these miniforms are tightly coupled to form. But no need to reach out for contactsModel. Instead just look it up with provider: ContactsModel contactsModel = context.watch();
     GroupData groupToAdd = form.widget.contactsModel.getGroupByName(label);
+    // ignore: unnecessary_null_comparison
     if (groupToAdd != null) {
       setFormState(() => c.groupList.add(groupToAdd));
     } else {

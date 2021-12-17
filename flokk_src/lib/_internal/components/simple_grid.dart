@@ -9,6 +9,7 @@ class SimpleGrid extends StatelessWidget {
   final double kidHeight;
   final CrossAxisAlignment align;
 
+  // ignore: todo
   //TODO SB: Refactor this class to support Hz scrolling
   const SimpleGrid({
     Key? key,
